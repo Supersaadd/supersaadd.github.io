@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria Saad - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #1e1e1e;
+            color: #e0e0e0;
+            text-align: center;
+            transition: background 0.5s, color 0.5s;
+        }
+        
+        /* Light Mode Styles */
+        body.light-mode {
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+
+        body.light-mode header {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        body.light-mode nav a {
+            color: #333;
+        }
+
+        nav a:hover {
+            color: #d4af37;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.5s, color 0.5s, opacity 1s, transform 1s;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+
+        body.light-mode section {
+            background: rgba(0, 0, 0, 0.05);
+        }
+
+        section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            width: 200px;
+            height: 220px;
+            border-radius: 50%;
+            border: 4px solid #d4af37;
+        }
+
+        a {
+            color: #8ab4f8; /* Purple for light mode */
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        /* Dark Mode Link Color */
+        body.dark-mode a {
+            color: #8ab4f8; /* Light blue for visibility */
+        }
+
+        /* Hover Effect */
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+        footer {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            transition: background 0.5s;
+        }
+
+        body.light-mode footer {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Dark Mode Toggle Button */
+        .toggle-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            background: linear-gradient(to right, #444, #222);
+            color: #fff;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out, transform 0.2s;
+        }
+
+        body.light-mode .toggle-button {
+            background: linear-gradient(to right, #ddd, #bbb);
+            color: #333;
+        }
+
+        .toggle-button:hover {
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <button class="toggle-button" onclick="toggleMode()">🌙 Dark Mode</button>
+        <img src="./Screenshot 2025-02-16 at 9.17.52 PM.png" alt="Maria Saad">
+        <h1>Maria Saad</h1>
+        <p>Computer Science | Technology Consultant | Front-End Developer </p>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a Computer Science student with a strong foundation in object-oriented programming (Java, Python, C++) and front-end development. My experience includes leadership roles in summer camps, enhancing teamwork and communication skills, and volunteering in hackathons, showcasing problem-solving abilities. Winning a robotics competition at UNESCO further developed my critical thinking and project management expertise.</p>
+    </section>
+    
+    <section id="education">
+        <h2>Education</h2>
+        <p><strong>Sorbonne University, Paris</strong> (2024 - 2026) - Master's in Networks, Computer Science</p>
+        <p>Relevant Courses: Cloud Computing, Advanced Networking, Distributed Systems, Cybersecurity, Machine Learning</p>
+        <br>
+        <p><strong>Sorbonne University, Paris</strong> (2021 - 2024) - Bachelor's in Computer Science</p>
+        <p>Relevant Courses: Data Structures, Algorithms, Operating Systems, Networking, Java, Python, Web Development, Database Management</p>
+        <br>
+        <p><strong>College Notre Dame de Jamhour, Beirut</strong> (2008 - 2021) - French Baccalaureate</p>
+    </section>
+    
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <ul>
+            <li><strong>Front-End Developer Intern</strong> - WIN Deep Tech (Jun 2023 - Sep 2023)<br>
+                - Led front-end development efforts to enhance UI/UX for a business platform.<br>
+                - Improved site responsiveness and interactivity using JavaScript, AJAX, and CSS.<br>
+                - Optimized database efficiency using SQL.</li>
+            <br>
+            <li><strong>Technology Consultant</strong> - Accenture (Job Simulation)<br>
+                - Designed interview strategies for client requirement analysis.<br>
+                - Developed process flow diagrams and strategic implementation plans.<br>
+                - Ensured alignment with agile methodologies and client needs.</li>
+            <br>
+            <li><strong>Mystery Shopper</strong> - ISC-CX (Sep 2024 - Present)<br>
+                - Evaluated in-store customer experience and service quality.<br>
+                - Provided actionable feedback for improving service interactions.</li>
+            <br>
+            <li><strong>Application Developer Intern</strong> - APPS2YOU (Jun 2019 - Jul 2019)<br>
+                - Assisted in debugging, software testing, and mobile application development.<br>
+                - Developed small-scale features for internal applications.</li>
+        </ul>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><strong>Version Control Software (Git Clone) in C</strong><br>
+                - Designed a simplified Git-like version control system.<br>
+                - Implemented key functionalities including branching, merging, and hashing.<br>
+                - Focused on performance optimization and storage efficiency.<br>
+               
+            <br>
+            <li><strong>Full Stack High-School Website</strong><br>
+                - Developed a responsive web platform for school management.<br>
+                - Integrated secure authentication using PHP and MySQL.<br>
+                - Created an interactive UI using HTML, CSS, and JavaScript.<br>
+                <a href="https://github.com/TDIAKITE23/Projet" target="_blank">GitHub Repository</a></li>
+            <br>
+            <li><strong>Snake Game in Java</strong><br>
+                - Implemented a classic snake game with a graphical user interface.<br>
+                - Designed efficient collision detection and movement mechanics.<br>
+                - Integrated score tracking and difficulty progression.<br>
+                <a href="https://github.com/katalinadnl/JAVA-PROJET/tree/main/LU2IN002-projet2022" target="_blank">GitHub Repository</a></li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Programming Languages: Java, Python, C, JavaScript, PHP, Bash</li><br>
+            <li>Web Development: HTML, CSS, JavaScript, React, Bootstrap</li><br>
+            <li>Databases: MySQL, PostgreSQL</li><br>
+            <li>Operating Systems: Linux, MacOS, Windows</li><br>
+            <li>Technologies: Git, Docker, AWS</li><br>
+            <li>Problem Solving & Algorithm Development</li><br>
+        </ul>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:mariasaad2003@gmail.com">mariasaad2003@gmail.com</a></p>
+        <p>Phone: +33 7 81 43 64 48</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/maria-saad/">Maria Saad</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Maria Saad. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            const button = document.querySelector('.toggle-button');
+            
+            // Toggle light mode correctly
+            body.classList.toggle('light-mode');
+            
+            // Update button text dynamically
+            if (body.classList.contains('light-mode')) {
+                button.textContent = "🌙 Dark Mode";
+            } else {
+                button.textContent = "🌞 Light Mode";
+            }
+        }
+
+        function revealSections() {
+            const sections = document.querySelectorAll("section");
+            const windowHeight = window.innerHeight;
+            
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < windowHeight - 100) {
+                    section.classList.add("show");
+                }
+            });
+        }
+
+        window.addEventListener("scroll", revealSections);
+        window.addEventListener("load", revealSections);
+
+    </script>
+</body>
+</html>
