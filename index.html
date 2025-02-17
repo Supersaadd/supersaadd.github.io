@@ -152,7 +152,18 @@
 <body>
     <header>
         <button class="toggle-button" onclick="toggleMode()">🌙 Dark Mode</button>
-        <img src="./Screenshot 2025-02-16 at 9.17.52 PM.png" alt="Maria Saad">
+        <img src="./Screenshot 2025-02-16 at 9.17.52 PM.png" alt="Maria Saad" class="profile-img" data-bs-toggle="modal" data-bs-target="#imageModal">
+                <!-- Bootstrap Modal (Place this right after <header> OR before </body>) -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-body text-center">
+                <img src="./Screenshot 2025-02-16 at 9.17.52 PM.png" class="img-fluid rounded" alt="Maria Saad">
+                </div>
+            </div>
+            </div>
+        </div>
+  
         <h1>Maria Saad</h1>
         <p>Computer Science | Technology Consultant | Front-End Developer </p>
         <nav>
