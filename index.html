@@ -147,6 +147,8 @@
             transform: scale(1.05);
         }
 
+  
+
     </style>
 </head>
 <body>
@@ -182,12 +184,16 @@
     
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a Master's student in Computer Science, specializing in Networks at Sorbonne University, with a strong foundation in object-oriented programming (Java, Python, C++) and front-end development. My experience includes leadership roles in summer camps, enhancing teamwork and communication skills, and volunteering in hackathons, showcasing problem-solving abilities. Winning a robotics competition at UNESCO further developed my critical thinking and project management expertise.</p>
+        <p>
+            
+            Master’s student in Computer Science at Sorbonne University, specializing in Networks and Security. Skilled in Java, Python, C++, and front-end development. Experience in Red Team activities and cybersecurity tools (Wireshark, Nmap, Metasploit). Strong leadership from organizing camps and leading student teams. Hackathon participant and UNESCO robotics competition winner, with strengths in problem-solving and project management.
+            
+        </p>
     </section>
     
     <section id="education">
         <h2>Education</h2>
-        <p><strong>Sorbonne University, Paris</strong> (2024 - 2026) - Master's in Networks, Computer Science</p>
+        <p><strong>Sorbonne University, Paris</strong> (2024 - 2026) - Master's in Cybersecurity and Networks, Computer Science</p>
         <p>Relevant Courses: Cloud Computing, Advanced Networking, Distributed Systems, Cybersecurity, Machine Learning</p>
         <br>
         <p><strong>Sorbonne University, Paris</strong> (2021 - 2024) - Bachelor's in Computer Science</p>
@@ -198,21 +204,130 @@
     
     <section id="experience">
         <h2>Professional Experience</h2>
-        <ul>
-            <li><strong>Front-End Developer Intern</strong> - WIN Deep Tech (Jun 2023 - Sep 2023)<br>
-                - Led front-end development efforts to enhance UI/UX for a business platform.<br>
-                - Improved site responsiveness and interactivity using JavaScript, AJAX, and CSS.<br>
-                - Optimized database efficiency using SQL.</li>
-            <br>
-            <li><strong>Active Club Member </strong> Google Developer Student Club (Sep 2023 - Present)<br>
-                - Organized workshops and conferences on machine learning and deep learning.<br>
-                - Attended hackathons on AI and deep learning.</li>
-            <br>
-            <li><strong>Application Developer Intern</strong> - APPS2YOU (Jun 2019 - Jul 2019)<br>
-                - Assisted in debugging, software testing, and mobile application development.<br>
-                - Developed small-scale features for internal applications.</li>
-        </ul>
-    </section>
+        <style>
+          .timeline-container {
+            position: relative;
+            padding-left: 25px;
+            margin-top: 2rem;
+            border-left: 3px solid #aaa;
+          }
+      
+          .timeline-entry {
+            position: relative;
+            margin-bottom: 50px;
+            padding: 20px 20px 20px 30px;
+            border-radius: 8px;
+            background: #f8f9fa;
+            color: #212529;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            animation: slideUp 0.6s ease-in-out both;
+            transition: box-shadow 0.3s ease;
+          }
+      
+          body.dark-mode .timeline-entry {
+            background: #2c2c2c;
+            color: #f1f1f1;
+          }
+      
+          .timeline-entry:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+          }
+      
+          .timeline-entry::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: -27px;
+            width: 14px;
+            height: 14px;
+            background: #0d6efd;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.3);
+          }
+      
+          .timeline-entry h3 {
+            font-size: 1.25rem;
+            margin: 0.3rem 0 0.6rem;
+            font-weight: 600;
+          }
+      
+          .timeline-entry span {
+            font-size: 0.9rem;
+            color: #6c757d;
+          }
+      
+          .timeline-entry p {
+            margin: 0.4rem 0 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+          }
+      
+          @keyframes slideUp {
+            from {
+              opacity: 0;
+              transform: translateY(20px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+      
+          @media screen and (max-width: 600px) {
+            .timeline-entry {
+              font-size: 0.9rem;
+              padding: 15px;
+            }
+            .timeline-entry h3 {
+              font-size: 1.1rem;
+            }
+          }
+        </style>
+      
+        <div class="timeline-container">
+          <div class="timeline-entry">
+            <span>Jun 2025 – Sep 2025</span>
+            <h3>Cybersecurity Intern – CNS Solid Network</h3>
+            <p>
+              - Implemented and executed network attack techniques (ARP spoofing, SNMP scanning) to identify vulnerabilities and produce technical reports.<br>
+              - Actively participated in Red Team activities to test the resilience of the company’s network infrastructure.<br>
+              - Used tools such as Wireshark, Nmap, and Metasploit to conduct advanced security analyses.
+            </p>
+          </div>
+      
+          <div class="timeline-entry">
+            <span>Jun 2023 – Sep 2023</span>
+            <h3>Front-End Developer Intern – WIN Deep Tech</h3>
+            <p>
+              - Led front-end development efforts to enhance UI/UX for a business platform.<br>
+              - Improved site responsiveness and interactivity using JavaScript, AJAX, and CSS.<br>
+              - Optimized database efficiency using SQL.
+            </p>
+          </div>
+      
+          <div class="timeline-entry">
+            <span>Sep 2023 – Present</span>
+            <h3>Active Club Member – Google Developer Student Club</h3>
+            <p>
+              - Organized workshops and conferences on machine learning and deep learning.<br>
+              - Attended hackathons on AI and deep learning.
+            </p>
+          </div>
+      
+          <div class="timeline-entry">
+            <span>Jun 2019 – Jul 2019</span>
+            <h3>Application Developer Intern – APPS2YOU</h3>
+            <p>
+              - Assisted in debugging, software testing, and mobile application development.<br>
+              - Developed small-scale features for internal applications.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      
+      
     
     <section id="projects">
         <h2>Projects</h2>
@@ -248,7 +363,10 @@
     <section id="skills">
         <h2>Skills</h2>
         <ul>
+            <li>Languages: French (native), Arabic (native), English (native)</li><br>
             <li>Programming Languages: Java, Python, C, JavaScript, React.js, PHP, Bash</li><br>
+            <li>Networking: TCP/IP, DNS, ARP, SNMP, VPN, Firewall configuration</li><br>
+            <li>Cybersecurity Tools: Wireshark, Nmap, Metasploit, Burp Suite, Netcat, Hydra</li><br>
             <li>Web Development: HTML, CSS, JavaScript, React, Bootstrap, Node.js, Express.js</li><br>
             <li>Databases: MySQL, MongoDB</li><br>
             <li>Operating Systems: Linux, MacOS, Windows</li><br>
